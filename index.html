@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatrice's portfolio</title>
+    <link rel="stylesheet" href="home-stylesheet.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Raleway:wght@600;700&display=swap');
+</style>
+
+<body>
+
+    <div id="butter">
+        <div class="parent">
+            <div class="logo"></div>
+            <div class="nav">
+                <div class="link hover-underline-animation" id="home"><span class="linknr">01.</span><br><a
+                        href="index.html">Home</a></div>
+
+                <div class="link hover-underline-animation" id="web"><span class="linknr">02.</span><br><a
+                        href="web.html">Website</a></div>
+                <div class="link hover-underline-animation" id="crm"><span class="linknr">03.</span><br><a
+                        href="crm.html">CRM</a>
+                </div>
+                <div class="link hover-underline-animation" id="personal"><span class="linknr">04.</span><br><a
+                        href="development.html">Development</a>
+                </div>
+                <div class="link hover-underline-animation" id="contact"><a href="contact">Contact &#x2192; </a> </div>
+            </div>
+
+            <div class="socials">
+                <div class="linkedin socialicon"><a class="bglink" href="https://www.linkedin.com/in/bsiaskute/"></a>
+                </div>
+                <div class="email socialicon"><a class="bglink" href="#"></a></div>
+
+            </div>
+            <div class="hero">
+                <div class="heroparent">
+                    <div class="herotext"><span class="hero1">Professional</span> <br>
+                        &nbsp&nbsp<span class="hero2">Practice</span>
+                        <br> &nbsp&nbsp&nbsp&nbsp<span class="hero3">Portfolio</span>
+                    </div>
+                    <div class="herosubtitle">
+                        <span class="subtitle">
+                            A portfolio of all the things I did at Triumph Motorcycles. Professional and personal
+                            development, projects, reflection and more.
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="heroslide">
+                        <div class="heroslideoverlay">
+                            <div class="heroslidetext">
+                                A photo I took at Motorcycle Live - an annual motorcycle show held at the National
+                                Exhibition Centre.
+                                I volunteered to work the weekend and chat to customers about the bikes.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="therole">
+            <div class="roleintro">
+                <div class="heading">
+                    <div class="underline">
+                        The Role
+                    </div>
+                </div>
+                <div class="rolesubtitle subtitle">
+                    During the first 5 months at Triumph, I worked in the website team. In November, I expressed
+                    interest in shadowing the CRM manager. In January, I was offered the opportunity to work 1 day a
+                    week in the CRM team, which later on increased to 2 and 3 days.
+                </div>
+            </div>
+            <div class="keyresponsibilities">
+                <div class="keyheadings heading underline">Key Responsibilities</div>
+                <div class="roletabs">
+                    <button class="crmtabwrapper tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+                        <div class="crmtab tabheading"><span class="crm">CRM</span></div>
+                    </button>
+                    <button class="webtabwrapper tablinks" onclick="openCity(event, 'Paris')">
+                        <div class="webtab tabheading"><span class="web">WEBSITE</span></div>
+                    </button>
+                    <div class="roletext">
+                        <div class="webtext subtitle tabcontent" id="Paris">
+                            <ul>
+                                <li>Website content editing. This includes improving the usability, design, and
+                                    conversion
+                                    of the company website</li>
+                                <li>Using data from the attribution model to deliver Website personalization with
+                                    pop-ins
+                                    and personalized website content</li>
+                                <li>Producing Reporting/Analytics as requested by the Website Manager</li>
+                                <li>Optimise the digital customer journey based on analytics</li>
+                                <li>Content management - resizing, editing and organizing images</li>
+                            </ul>
+                        </div>
+                        <div class="crmtext subtitle tabcontent" id="London">
+                            <ul>
+                                <li>Quality control, scheduling and sending local market emails provided by subsidiaries
+                                </li>
+                                <li>Assisting in migrating email journeys to Microsoft Dynamics 365, building emails,
+                                    creating
+                                    journeys, performing testing</li>
+                                <li>Producing reports of email performance</li>
+                                <li>Overseeing CRM activity while the CRM Coordinator is out of office</li>
+                                <li>Updating old email journeys from a visual and journey flow perspective</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="explore">
+            <div class="heading">Explore projects</div>
+            <div class="explorecardswrapper">
+                <div class="card webcard">
+                    <a href="web.html">
+                        <div class="cardhover"><span class="cardhovertext">discover more &#x2192</span></div>
+                    </a>
+                    <div class="cardtitle">web</div>
+                </div>
+
+                <div class="card crmcard">
+                    <a href="crm.html">
+                        <div class="cardhover"><span class="cardhovertext">discover more &#x2192</span></div>
+                    </a>
+                    <div class="cardtitle">crm</div>
+                </div>
+
+                <div class="card developmentcard">
+                    <a href="development.html">
+                        <div class="cardhover"><span class="cardhovertext">discover more &#x2192</span></div>
+                    </a>
+                    <div class="cardtitle">development</div>
+                </div>
+
+            </div>
+
+            <div class="backtotop subtitle"><a href="#"><span class="arrow">&#x2191;</span><br>Back to top</a></div>
+        </div>
+        <div class="marginplaceholder"></div>
+        <script src="pppJS.js"></script>
+        <script>
+            // smooth like buttah...
+            butter.init();</script>
+        <script>function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+
+            }</script>
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+</body>
+
+</html>

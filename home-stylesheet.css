@@ -1,0 +1,694 @@
+body {
+    background-color: #171717;
+    margin: 0;
+    box-sizing: border-box;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 0.8fr 12fr;
+    grid-template-rows: 0.5fr 1.5fr 12fr 0.4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    grid-template-areas:
+        ". ."
+        "logo nav"
+        "socials hero"
+        ". .";
+}
+
+.logo {
+    grid-area: logo;
+    border-bottom: 1px #555555 solid;
+    border-right: 1px #555555 solid;
+
+}
+
+.nav {
+    border-bottom: 1px #555555 solid;
+    grid-area: nav;
+    border-left: none;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr 0.7fr 1fr 0.7fr 6fr 1.2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        ". home web crm personal future . contact";
+    text-align: left;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInLeft;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+.link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: auto 0;
+
+}
+
+.linknr {
+    font-weight: 200;
+}
+
+#home {
+    grid-area: home;
+}
+
+#web {
+    grid-area: web;
+}
+
+#crm {
+    grid-area: crm;
+}
+
+#personal {
+    grid-area: personal;
+}
+
+#future {
+    grid-area: future;
+}
+
+#contact {
+    grid-area: contact;
+    font-size: 18px;
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.5px;
+    bottom: -2px;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    background-color: rgba(255, 255, 255, 0.904);
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.socials {
+    border-right: 1px #555555 solid;
+    grid-area: socials;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10fr repeat(2, 0.45fr) 0.2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+        "."
+        "linkedin"
+        "email"
+        ".";
+}
+
+.linkedin {
+    grid-area: linkedin;
+    background-image: url(https://i.ibb.co/6mZdJPm/linkedin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.email {
+    grid-area: email;
+    background-image: url(https://i.ibb.co/xMNwkrm/email.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.hero {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 0.1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        "herotext carousel";
+}
+
+.herotext {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 75px;
+    line-height: 100%;
+}
+
+.p {
+    color: rgb(255, 255, 255);
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    color: white;
+    display: inline-block;
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 150%;
+    font-weight: 200;
+    animation: fadeInbottom 2s;
+    animation-timing-function: ease;
+}
+
+.heroparent {
+    margin-top: 27vh;
+    width: min-content;
+    margin-left: 25%;
+    grid-area: herotext;
+
+}
+
+.carousel {
+    grid-area: carousel;
+    margin-top: 20px;
+    position: relative;
+    animation: fadeIndelay2 3s;
+    animation-timing-function: ease-in;
+
+}
+
+.heroslide {
+    background-image: url(https://i.ibb.co/18xc5HG/IMG-20211211-162814-Bokeh-01.jpg);
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInbottom {
+    0% {
+        opacity: 0;
+        transform: translateY(15%)
+    }
+
+    55% {
+        opacity: 0;
+        transform: translateY(15%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.socials {
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInBottom;
+}
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.socialicon {
+    animation: fadeIndelay 2.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeIndelay {
+    0% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link {
+    animation: fadeIndelay 2.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    22% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIndelay2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-5%)
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes fadeInbottomhero1 {
+    0% {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInbottomhero2 {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    33% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInbottomhero3 {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.hero1 {
+    display: inline-block;
+    animation: fadeInbottomhero1 0.8s ease;
+}
+
+.hero2 {
+    display: inline-block;
+    animation: fadeInbottomhero2 1s ease;
+}
+
+.hero3 {
+    display: inline-block;
+    animation: fadeInbottomhero3 1.2s ease;
+}
+
+.heroslideoverlay {
+    position: absolute;
+    top: 50;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    opacity: 0;
+    width: 100%;
+    transition: ease 0.7s;
+}
+
+.heroslide:hover .heroslideoverlay {
+    opacity: 1;
+}
+
+.heroslidetext {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.3px;
+    text-align: left;
+    font-size: 15px;
+    margin: 30px;
+}
+
+.bglink {
+    display: inline-block;
+    height: 27px;
+    width: 73px;
+}
+
+a.email {
+    grid-area: email;
+}
+
+a.linkedin {
+    grid-area: linkedin;
+}
+
+.therole {
+    margin-top: 100px;
+}
+
+.roleintro {
+    width: 50%;
+    margin-left: 30%;
+    text-align: right;
+}
+
+.heading {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 75px;
+    line-height: 65px;
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4.5px;
+    bottom: -10px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.904);
+    margin-left: -80px;
+}
+
+.rolesubtitle {
+    line-height: 24px;
+    margin-right: 5%;
+    margin-left: 80px;
+    text-align: right;
+    font-size: 16px;
+
+}
+
+.roletabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        "crmtab webtab"
+        "roletext roletext";
+    width: 100%;
+    grid-area: roletabs;
+}
+
+.crmtabwrapper {
+    grid-area: crmtab;
+    border-bottom: 1px solid #555555;
+    background-color: #171717;
+    padding: 0;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: 0.3s;
+}
+
+.webtabwrapper {
+    grid-area: webtab;
+    border-bottom: 1px solid rgb(85, 85, 85);
+    background-color: #171717;
+    padding: 0;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: 0.3s;
+}
+
+.crmtab {
+    height: 100%;
+}
+
+span.crm {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+span.web {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.webtab {
+    height: 100%;
+}
+
+.tabheading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    color: white;
+    text-align: center;
+}
+
+button.active {
+    background: rgb(23, 23, 23);
+    background: linear-gradient(180deg, #171717 4%, rgb(68, 68, 68) 100%);
+}
+
+.roletext {
+    grid-area: roletext;
+}
+
+@keyframes fadeInbottom2 {
+    0% {
+        opacity: 0;
+        transform: translateY(15%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.roletext .subtitle {
+    animation: fadeInbottom2 1s ease;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 20px 20px 20px 0px
+}
+
+.keyresponsibilities {
+    display: grid;
+    grid-template-columns: 15vw 0.7fr 0.1fr 1fr 15vw;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        ". heading . roletabs";
+    margin-top: 20vh;
+    margin-bottom: 11vh;
+}
+
+.keyresponsibilities .heading {
+    grid-area: heading;
+    font-size: 51px;
+}
+
+.keyresponsibilities .underline::after {
+    top: 127px;
+    width: 75%;
+    height: 3.5px;
+    margin-left: 28%;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.explore .heading {
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.explorecardswrapper {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-columns: 7vw 1fr 1fr 1fr 7vw;
+    height: 30vh;
+    grid-column-gap: 30px;
+    grid-template-areas: ". web crm development ."
+        ". webtitle crmtitle developmenttitle.";
+}
+
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.5s;
+}
+
+.cardhover {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 1.4px;
+    font-variant: small-caps;
+    font-size: 20px;
+    text-align: center;
+    background-color: #000000b8;
+    height: 100%;
+    opacity: 0;
+    transition: ease 0.5s;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+.card:hover .cardhover {
+    opacity: 1;
+    transition: ease 0.5s;
+    box-shadow: 7px 7px 32px 0px rgba(0, 0, 0, 0.86);
+}
+
+.cardhovertext {
+    display: inline-block;
+    margin-top: 50%;
+}
+
+.webcard {
+    grid-area: web;
+    background-image: url(https://i.ibb.co/jbMQHB1/Untitled-2.jpg);
+}
+
+.cardtitle {
+    margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 1.4px;
+    font-variant: small-caps;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.crmcard {
+    grid-area: crm;
+    background-image: url(https://i.ibb.co/tshJsz8/Untitled-1.jpg);
+    background-size: cover;
+}
+
+.developmentcard {
+    grid-area: development;
+
+    background-image: url(https://i.ibb.co/N2bwF4r/FVE-Group-tours-VI-hero-1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.futurecard {
+    grid-area: future;
+}
+
+.backtotop {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.arrow {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.cta {
+    outline: inherit;
+    font-variant: small-caps;
+    color: white;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #171717;
+    letter-spacing: 2px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,88 @@
+.heroparent {
+    margin-left: 12%;
+}
+
+.herosubtitle {
+    width: 80%;
+    float: right;
+}
+
+.parent {
+    background-size: cover;
+}
+
+.bgimg img {
+    width: 105%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    margin-left: -1%;
+    animation: fadeIn3 2.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn3 {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.bgblack {
+    width: 105%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+    z-index: -2;
+    margin-left: -1%;
+    height: 100%;
+}
+
+.cta {
+    background-color: black;
+}
+
+.imggrid {
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr 1.3fr;
+    grid-column-gap: 20px;
+    grid-template-areas: ". nice job you .";
+    height:450px;
+}
+
+.imggrid1{
+    grid-area:nice;
+    background-image: url(https://i.ibb.co/9ynkwvr/Email-1-copy.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.imggrid2{
+    grid-area:job;
+    background-image:url(https://i.ibb.co/5Rvr62N/2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.imggrid3{
+    grid-area:you;
+    background-image:url(https://i.ibb.co/2gP244C/3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#content{
+    display: none;
+}
+  

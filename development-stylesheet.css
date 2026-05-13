@@ -1,0 +1,42 @@
+.heroparent {
+    margin-left: 15%;
+}
+.hero3 {
+    display:inline;
+}
+.mentorship {
+    margin-top:100px;text-align: center;
+}
+
+.mentorship .subtitle {
+    margin:30px 300px 20px 300px;
+}
+
+.training {
+    text-align: center;
+    margin-top:30px;
+}
+
+.training .subtitle {
+    margin:30px 300px 20px 300px;
+}
+
+.other {
+    text-align: center;
+    margin-top:30px;
+}
+
+.other .heading {
+    font-size:60px;
+}
+.caption{
+    font-style: italic;
+    font-size:15px;
+    margin:10px 0 10px 0;
+    text-align: center;
+    width:100%;
+  }
+
+  .imglink {
+    width:100%;
+  }
